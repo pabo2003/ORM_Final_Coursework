@@ -79,7 +79,7 @@ public class UserController {
 
     UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOType.USER);
 
-    public void initialize(){
+   /* public void initialize(){
         setDate();
         setCallValueFactory();
         setTable();
@@ -92,7 +92,7 @@ public class UserController {
         String nextId = userBO.getCurrentId();
         lblUserID.setText(nextId);
         return nextId;
-    }
+    }*/
 
 
     @FXML
