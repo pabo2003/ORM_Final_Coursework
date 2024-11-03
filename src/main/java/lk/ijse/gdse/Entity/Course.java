@@ -1,70 +1,31 @@
 package lk.ijse.gdse.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 @Entity
 public class Course {
     @Id
-    private String id;
-    private String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private String course_id;
+    private String course_name;
     private String duration;
-    private String fee;
+    private double course_fee;
 
-    @ManyToMany(mappedBy = "StudentDTO")
-    private List<StudentRegister> studentRegisterList;
+    @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
+    private List<Student_Course> studentCourses;
 
-    public Course(String id, String name, String duration, String fee, List<StudentRegister> studentRegisterList) {
-        this.id = id;
-        this.name = name;
+    public Course(String courseId, String courseName, String duration, double courseFee) {
+        this.course_id = courseId;
+        this.course_name = courseName;
         this.duration = duration;
-        this.fee = fee;
-        this.studentRegisterList = studentRegisterList;
-    }
-
-    public Course() {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
-
-    public String getFee() {
-        return fee;
-    }
-
-    public void setFee(String fee) {
-        this.fee = fee;
-    }
-
-    public List<StudentRegister> getStudentRegisterList() {
-        return studentRegisterList;
-    }
-
-    public void setStudentRegisterList(List<StudentRegister> studentRegisterList) {
-        this.studentRegisterList = studentRegisterList;
+        this.course_fee = courseFee;
     }
 }
