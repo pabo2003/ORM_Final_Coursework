@@ -3,6 +3,8 @@ package lk.ijse.gdse.Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import lk.ijse.gdse.BO.BOFactory;
+import lk.ijse.gdse.BO.UserBO;
 
 public class UserController {
 
@@ -74,6 +76,24 @@ public class UserController {
 
     @FXML
     private TextField txtPhone;
+
+    UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOType.USER);
+
+    public void initialize(){
+        setDate();
+        setCallValueFactory();
+        setTable();
+        selectTableRows();
+        generateNewId();
+        filterUser();
+    }
+
+    private String generateNewId(){
+        String nextId = userBO.getCurrentId();
+        lblUserID.setText(nextId);
+        return nextId;
+    }
+
 
     @FXML
     void btnAddOnAction(ActionEvent event) {
