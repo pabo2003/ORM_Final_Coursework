@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="506.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.CourseController">
+<AnchorPane prefHeight="506.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.Controllers.CourseController">
 
     <!-- Labels and Input Fields -->
     <Label layoutX="20.0" layoutY="113.0" text="Program ID:" />

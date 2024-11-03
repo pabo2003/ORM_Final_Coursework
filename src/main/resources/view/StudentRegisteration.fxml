@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.Controllers.StudentRegisterController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="506.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.Controllers.StudentRegisterController">
+   <children>
+      <Label layoutX="22.0" layoutY="146.0" text="Student Id:-" />
+      <Label layoutX="23.0" layoutY="175.0" text="Student Name:" />
+      <Label layoutX="496.0" layoutY="48.0" text="Date:-" />
+      <Label layoutX="22.0" layoutY="108.0" text="Pay Id:-" />
+      <Button fx:id="btnAdd" layoutX="30.0" layoutY="234.0" onAction="#btnAddOnAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Add" />
+      <Button fx:id="btnUpdate" layoutX="90.0" layoutY="234.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #FF9800; -fx-text-fill: white;" text="Update" />
+      <Button fx:id="btnClear" layoutX="166.0" layoutY="234.0" onAction="#btnClearOnAction" style="-fx-background-color: #607D8B; -fx-text-fill: white;" text="Clear" />
+      <Label fx:id="lblStudentName" layoutX="129.0" layoutY="174.0" prefHeight="18.0" prefWidth="140.0" />
+      <Label layoutX="23.0" layoutY="26.0" prefHeight="44.0" prefWidth="365.0" text="Student Registration">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBack" layoutX="231.0" layoutY="234.0" onAction="#btnBackOnAction" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Back" />
+      <TableView fx:id="tblRegistration" layoutX="80.0" layoutY="269.0" prefHeight="214.0" prefWidth="682.0">
+         <columns>
+            <TableColumn fx:id="colDate" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="colStudentId" prefWidth="104.0" text="Student Id" />
+            <TableColumn fx:id="colStudentName" prefWidth="175.0" text="Student Name" />
+            <TableColumn fx:id="colCourseName" prefWidth="136.0" text="Course Name" />
+            <TableColumn fx:id="colFee" prefWidth="191.0" text="Course Fee" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="comStudentId" layoutX="116.0" layoutY="142.0" prefHeight="24.0" prefWidth="165.0" promptText="select student id" />
+      <Label layoutX="373.0" layoutY="145.0" text="Course Id:-" />
+      <Label layoutX="374.0" layoutY="174.0" text="Course Name:" />
+      <Label fx:id="lblCourseName" layoutX="487.0" layoutY="173.0" prefHeight="18.0" prefWidth="140.0" />
+      <ComboBox fx:id="comCourseId" layoutX="467.0" layoutY="141.0" prefHeight="24.0" prefWidth="165.0" promptText="select course id" />
+      <Label layoutX="374.0" layoutY="201.0" text="Course Fee:" />
+      <Label fx:id="lblCourseFee" layoutX="487.0" layoutY="200.0" prefHeight="18.0" prefWidth="140.0" />
+      <Label fx:id="lblDate" layoutX="550.0" layoutY="47.0" prefHeight="18.0" prefWidth="140.0" />
+      <Label fx:id="lblPayId" layoutX="96.0" layoutY="107.0" prefHeight="18.0" prefWidth="140.0" />
+   </children>
 </AnchorPane>
