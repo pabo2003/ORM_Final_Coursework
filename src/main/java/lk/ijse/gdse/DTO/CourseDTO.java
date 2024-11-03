@@ -12,9 +12,8 @@ import java.util.List;
 @ToString
 @Data
 public class CourseDTO {
-
-    private String id;
-    private String name;
+    private String course_id;
+    private String course_name;
     private String duration;
-    private String fee;
+    private double course_fee;
 }
