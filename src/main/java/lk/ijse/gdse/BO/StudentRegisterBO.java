@@ -1,4 +1,4 @@
 package lk.ijse.gdse.BO;
 
-public interface StudentRegisterBO {
+public interface StudentRegisterBO extends SuperBO{
 }

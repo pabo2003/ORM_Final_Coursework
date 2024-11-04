@@ -1,4 +1,12 @@
 package lk.ijse.gdse.BO;
 
-public interface CourseBO {
+import lk.ijse.gdse.DTO.CourseDTO;
+
+public interface CourseBO extends SuperBO{
+
+    public boolean save(CourseBO dto) throws Exception;
+
+    public boolean update(CourseDTO dto) throws Exception;
+
+    public boolean delete(String ID)throws Exception;
 }
