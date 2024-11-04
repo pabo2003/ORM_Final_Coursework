@@ -12,7 +12,7 @@ import java.util.Date;
 @ToString
 @Data
 
-public class StudentRegisterDTO {
+public class Student_CourseDTO {
     private String student_course_id;
     private Date registration_date;
 }

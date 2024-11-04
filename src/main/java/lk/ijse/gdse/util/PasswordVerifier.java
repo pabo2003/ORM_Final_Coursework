@@ -3,7 +3,7 @@ package lk.ijse.gdse.util;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class PasswordVerifier {
-    public static boolean verifyPassword(String password,String hashedPassword){
-        return BCrypt.checkpw(password,hashedPassword);
-    }
+public static boolean verifyPassword(String password,String hashedPassword) {
+    return BCrypt.checkpw(password,hashedPassword);
+}
 }

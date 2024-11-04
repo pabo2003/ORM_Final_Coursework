@@ -5,7 +5,7 @@ import lk.ijse.gdse.DTO.CourseDTO;
 
 public class CourseBOImpl implements CourseBO {
     @Override
-    public boolean save(CourseBO dto) throws Exception {
+    public boolean save(CourseDTO dto) throws Exception {
         return false;
     }
 

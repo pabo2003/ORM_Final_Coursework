@@ -2,8 +2,6 @@ package lk.ijse.gdse.DTO;
 
 import lombok.*;
 
-import java.util.List;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

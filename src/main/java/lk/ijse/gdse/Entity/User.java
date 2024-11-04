@@ -7,10 +7,10 @@ import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Data
 @Entity
+@Getter
+@Setter
 public class User {
     @Id
     private String user_id;

@@ -8,10 +8,10 @@ import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @Data
 @Entity
+@Getter
+@Setter
 public class Student_Course {
     @Id
     private String student_course_id;

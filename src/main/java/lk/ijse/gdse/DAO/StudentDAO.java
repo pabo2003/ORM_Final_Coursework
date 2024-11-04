@@ -1,4 +1,7 @@
 package lk.ijse.gdse.DAO;
 
-public interface StudentDAO {
+import lk.ijse.gdse.Entity.Course;
+import lk.ijse.gdse.Entity.Student;
+
+public interface StudentDAO extends CrudDAO<Student> {
 }

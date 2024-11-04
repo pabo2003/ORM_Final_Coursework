@@ -7,10 +7,10 @@ import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @Data
 @Entity
+@Getter
+@Setter
 public class Student {
     @Id
     private String stu_id;

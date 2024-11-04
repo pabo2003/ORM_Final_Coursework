@@ -10,7 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import lk.ijse.gdse.BO.BOFactory;
+import lk.ijse.gdse.BO.Impl.BOFactory;
+import lk.ijse.gdse.BO.Impl.UserBOImpl;
 import lk.ijse.gdse.BO.UserBO;
 import lk.ijse.gdse.DTO.UserDTO;
 import lk.ijse.gdse.util.PasswordEncrypt;
@@ -77,7 +78,7 @@ public class UserController {
     @FXML
     private TextField txtPhone;
 
-    UserBO userBO = (UserBO) BOFactory.getBoFactory().getBO(BOFactory.BOType.USER);
+UserBO userBO = (UserBOImpl) BOFactory.getBoFactory().getBo(BOFactory.BoType.User);
 
     public void initialize(){
         setCellValueFactory();
@@ -112,7 +113,7 @@ public class UserController {
             List<UserDTO> userDTOList = userBO.getAll();
             for (UserDTO userDTO : userDTOList) {
                 UserDTO tm = new UserDTO(
-                        userDTO.getUser_id(),
+                       userDTO.getUser_id(),
                         userDTO.getUsername(),
                         userDTO.getAddress(),
                         userDTO.getUser_phone(),
@@ -186,7 +187,7 @@ public class UserController {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
-        clear();
+    clear();
 
     }
 

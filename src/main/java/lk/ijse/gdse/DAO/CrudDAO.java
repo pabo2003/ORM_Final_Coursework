@@ -1,7 +1,5 @@
 package lk.ijse.gdse.DAO;
 
-import lk.ijse.gdse.DAO.SuperDAO;
-
 import java.sql.SQLException;
 import java.util.List;
 
