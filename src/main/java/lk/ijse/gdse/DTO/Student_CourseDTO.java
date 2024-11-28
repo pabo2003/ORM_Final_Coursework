@@ -14,5 +14,7 @@ import java.util.Date;
 
 public class Student_CourseDTO {
     private String student_course_id;
+    private StudentDTO student;
+    private CourseDTO course;
     private Date registration_date;
 }

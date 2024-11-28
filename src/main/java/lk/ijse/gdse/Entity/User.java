@@ -12,6 +12,7 @@ import lombok.*;
 @Getter
 @Setter
 public class User {
+    //
     @Id
     private String user_id;
     private String username;

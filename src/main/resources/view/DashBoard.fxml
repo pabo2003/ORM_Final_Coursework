@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="506.0" prefWidth="831.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.Controllers.DashBoardController">
+<AnchorPane prefHeight="506.0" prefWidth="831.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.DashBoardController">
 
 
 
@@ -19,4 +27,39 @@
 
      <Button disable="true" layoutX="358.0" layoutY="21.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Dashboard" />
 
+</AnchorPane>
+
+-->
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right,deepPink, black);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.DashBoardController">
+
+     <Button fx:id="btnUsers" layoutX="697.0" layoutY="151.0" onAction="#btnUsersOnAction" prefHeight="50.0" prefWidth="122.0" style="-fx-border-radius: 5px; -fx-background-color: #FF0080; -fx-border-color: black; -fx-border-width: 5px; -fx-cursor: hand;" text="Users" textFill="#141313">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+     <Button fx:id="btnCourse" layoutX="436.0" layoutY="151.0" onAction="#btnCourseOnAction" prefHeight="50.0" prefWidth="122.0" style="-fx-border-radius: 5px; -fx-background-color: #FF0080; -fx-border-color: black; -fx-border-width: 5px; -fx-cursor: hand;" text="Course" textFill="#141313">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+     <Button fx:id="btnPayment" layoutX="574.0" layoutY="279.0" onAction="#btnPaymentOnAction" prefHeight="50.0" prefWidth="122.0" style="-fx-border-radius: 5px; -fx-background-color: #FF0080; -fx-border-color: black; -fx-border-width: 5px; -fx-cursor: hand;" text="Payment" textFill="#141313">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+     <Button fx:id="btnStudentRegister" layoutX="408.0" layoutY="399.0" onAction="#btnStudentRegisterOnAction" prefHeight="50.0" prefWidth="200.0" style="-fx-border-radius: 5px; -fx-background-color: #FF0080; -fx-border-color: black; -fx-border-width: 5px; -fx-cursor: hand;" text="Student Register" textFill="#141313">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+     <Button fx:id="btnLogout" layoutX="314.0" layoutY="279.0" onAction="#btnLogoutOnAction" prefHeight="50.0" prefWidth="122.0" style="-fx-border-radius: 5px; -fx-background-color: #FF0080; -fx-border-color: black; -fx-border-width: 5px; -fx-cursor: hand;" text="Logout" textFill="#141313">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+     <Button fx:id="btnStudent" layoutX="198.0" layoutY="151.0" onAction="#btnStudentOnAction" prefHeight="50.0" prefWidth="122.0" style="-fx-border-radius: 5px; -fx-background-color: #FF0080; -fx-border-color: black; -fx-border-width: 5px; -fx-cursor: hand;" text="Student" textFill="#141313">
+      <font>
+         <Font name="System Bold Italic" size="14.0" />
+      </font></Button>
+   <Label layoutX="393.0" layoutY="27.0" prefHeight="54.0" prefWidth="314.0" text="Dashboard" textFill="#141313">
+      <font>
+         <Font name="System Bold Italic" size="44.0" />
+      </font>
+   </Label>
 </AnchorPane>

@@ -7,6 +7,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.*;
 
+import java.sql.Date;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +18,7 @@ import lombok.*;
 public class Payment {
     @Id
     private String pay_id;
-    private String pay_date;
+    private Date pay_date;
     private double pay_amount;
 
     @ManyToOne

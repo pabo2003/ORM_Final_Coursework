@@ -1,6 +1,6 @@
-package lk.ijse.gdse.BO.Impl;
+package lk.ijse.gdse.BO;
 
-import lk.ijse.gdse.BO.SuperBO;
+import lk.ijse.gdse.BO.Impl.*;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -12,7 +12,7 @@ public class BOFactory {
         return (boFactory == null) ? boFactory = new BOFactory() : boFactory;
     }
     public enum BoType{
-        User, Student, Payment, Course, Student_Course
+        User, Student, Payment, Course, Student_Course,Login
 
     }
     public SuperBO getBo(BoType boType){
@@ -28,6 +28,8 @@ public class BOFactory {
                 return  new CourseBOImpl();
                 case Student_Course:
                 return  new Student_CourseBOImpl();
+                case Login:
+                    return  new LoginBOImpl();
             default:
                 return null;
 

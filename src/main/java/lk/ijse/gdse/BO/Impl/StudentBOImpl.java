@@ -2,9 +2,11 @@ package lk.ijse.gdse.BO.Impl;
 
 import lk.ijse.gdse.BO.StudentBO;
 import lk.ijse.gdse.DAO.DAOFactory;
-import lk.ijse.gdse.DAO.StudentDAO;
+import lk.ijse.gdse.DAO.Impl.StudentDAO;
 import lk.ijse.gdse.DTO.StudentDTO;
+import lk.ijse.gdse.DTO.UserDTO;
 import lk.ijse.gdse.Entity.Student;
+import lk.ijse.gdse.Entity.User;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,48 +15,79 @@ import java.util.List;
 public class StudentBOImpl implements StudentBO {
     StudentDAO studentDAO = (StudentDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DaoType.Student);
 
-    /*@Override
-    public boolean save(StudentDTO dto) throws Exception {
-        return studentDAO.save(new Student(dto.getStu_id(),dto.getStu_name(),dto.getStu_phone(),dto.getStu_email(),dto.getStu_address());
-
-    }*/
     @Override
     public boolean save(StudentDTO dto) throws Exception {
-        /*if (dto == null) {
-            throw new IllegalArgumentException("StudentDTO cannot be null");
-        }
 
-        Student student = new Student();
-        student.setStu_id(dto.getStu_id());
-        student.setStu_name(dto.getStu_name());
-        student.setStu_phone(dto.getStu_phone());
-        student.setStu_email(dto.getStu_email());
-        student.setStu_address(dto.getStu_address());
+        Student student = new Student(
+                dto.getStu_id(),
+                dto.getStu_name(),
+                dto.getStu_phone(),
+                dto.getStu_email(),
+                dto.getStu_address(),
+                new ArrayList<>(),
+                new User(dto.getUser().getUser_id(), dto.getUser().getUsername(), dto.getUser().getAddress(),
+                        dto.getUser().getUser_phone(), dto.getUser().getUser_email(), dto.getUser().getPosition(),
+                        dto.getUser().getPassword()));
 
-        return studentDAO.save(student);*/
-//        return studentDAO.save(new Student(dto.getStu_id(), dto.getStu_name(), dto.getStu_phone(), dto.getStu_email(), dto.getStu_address()));
-        Student student = new Student(dto.getStu_id(), dto.getStu_name(), dto.getStu_phone(), dto.getStu_email(),dto.getStu_address());
         return studentDAO.save(student);
     }
 
-
     @Override
     public boolean update(StudentDTO dto) throws Exception {
-        return studentDAO.update(new Student(dto.getStu_id(), dto.getStu_name(), dto.getStu_phone(), dto.getStu_email(), dto.getStu_address()));
+        Student student = new Student(
+                dto.getStu_id(),
+                dto.getStu_name(),
+                dto.getStu_phone(),
+                dto.getStu_email(),
+                dto.getStu_address(),
+                new ArrayList<>(),
+                new User(dto.getUser().getUser_id(), dto.getUser().getUsername(), dto.getUser().getAddress(),
+                        dto.getUser().getUser_phone(), dto.getUser().getUser_email(), dto.getUser().getPosition(),
+                        dto.getUser().getPassword()));
+
+        return studentDAO.update(student);
     }
 
     @Override
     public boolean delete(String ID) throws Exception {
-        return studentDAO.delete(ID);
+return studentDAO.delete(ID);
+    }
+
+    @Override
+    public String generateNextId() throws SQLException, ClassNotFoundException {
+        return studentDAO.generateNextId();
     }
 
     @Override
     public List<StudentDTO> getAll() throws SQLException, ClassNotFoundException {
         List<Student> students = studentDAO.getAll();
-        List<StudentDTO> dtos = new ArrayList<>();
+        List<StudentDTO> dtoList = new ArrayList<>();
         for (Student student : students) {
-            dtos.add(new StudentDTO(student.getStu_id(),student.getStu_name(),student.getStu_phone(),student.getStu_email(),student.getStu_address()));
+            StudentDTO dto = new StudentDTO(
+                    student.getStu_id(),
+                    student.getStu_name(),
+                    student.getStu_phone(),
+                    student.getStu_email(),
+                    student.getStu_address(),
+                    new UserDTO(student.getUser().getUser_id(), student.getUser().getUsername(), student.getUser().getAddress(),
+                            student.getUser().getUser_phone(), student.getUser().getUser_email(), student.getUser().getPosition(),
+                            student.getUser().getPassword())
+            );
+            dtoList.add(dto);
         }
-        return dtos;
+        return dtoList;
+
     }
-}
+
+    @Override
+    public List<String> getIds() {
+        return studentDAO.getIds();
+    }
+
+
+    @Override
+    public Student searchByContact(String id) throws SQLException, ClassNotFoundException{
+        return studentDAO.searchByContact(id);
+    }
+
+    }

@@ -2,6 +2,8 @@ package lk.ijse.gdse.DTO;
 
 import lombok.*;
 
+import java.sql.Date;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -11,7 +13,7 @@ import lombok.*;
 @Data
 public class PaymentDTO {
     private String pay_id;
-    private String pay_date;
+    private Date pay_date;
     private double pay_amount;
-    private String status;
+    private Student_CourseDTO studentCourse;
 }

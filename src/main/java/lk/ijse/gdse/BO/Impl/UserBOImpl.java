@@ -2,7 +2,7 @@ package lk.ijse.gdse.BO.Impl;
 
 import lk.ijse.gdse.BO.UserBO;
 import lk.ijse.gdse.DAO.DAOFactory;
-import lk.ijse.gdse.DAO.UserDAO;
+import lk.ijse.gdse.DAO.Impl.UserDAO;
 import lk.ijse.gdse.DTO.UserDTO;
 import lk.ijse.gdse.Entity.User;
 
@@ -38,7 +38,17 @@ public class UserBOImpl implements UserBO {
     }
 
     @Override
-    public UserDTO searchByIdCustomer(String id) throws SQLException, ClassNotFoundException {
-        return null;
+    public User searchByIdUser(String id) throws SQLException, ClassNotFoundException {
+        return userDAO.searchByID(id);
+    }
+
+    @Override
+    public String generateNextId() throws SQLException, ClassNotFoundException {
+        return userDAO.generateNextId();
+    }
+
+    @Override
+    public List<String> getUserIds() {
+        return userDAO.getUserIds();
     }
 }

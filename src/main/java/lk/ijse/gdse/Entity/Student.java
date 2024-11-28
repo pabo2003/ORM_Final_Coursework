@@ -21,7 +21,17 @@ public class Student {
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     private List<Student_Course> studentCourses;
+    //associate table ekt yn ek
 
     @ManyToOne
     private User user;
+    //UserId eka ganna
+
+    /*public String getUser_id() {
+        return user != null ? user.getUser_id() : null;
+    }*/
+
+
+
+
 }
