@@ -29,6 +29,17 @@ public class DashBoardController {
     private Button btnStudentRegister;
     @FXML
     private Button btnUsers;
+    @FXML
+    private Label lblDate;
+
+    @FXML
+    private Label lblName;
+
+    @FXML
+    private Label lblPosition;
+
+    @FXML
+    private Label lblUserNmae;
 
     LoginDAO loginDAO = (LoginDAO) DAOFactory.getDaoFactory().getDAO(DAOFactory.DaoType.Login);
     public void initialize() throws SQLException, ClassNotFoundException {
