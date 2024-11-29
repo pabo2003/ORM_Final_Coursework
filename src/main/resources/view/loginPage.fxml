@@ -7,34 +7,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right,#141E30, #243B55);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.LoginController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: linear-gradient(to bottom right,#141E30, #243B55);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.Controllers.LoginController">
 
-          <!-- Username Field -->
+    <!-- Username Field -->
     <Label layoutX="318.0" layoutY="315.0" text="Username:" textFill="#3e9bf8">
-      <font>
-         <Font name="System Bold Italic" size="19.0" />
-      </font>
-   </Label>
+        <font>
+            <Font name="System Bold Italic" size="19.0" />
+        </font>
+    </Label>
     <TextField fx:id="txtUsername" layoutX="438.0" layoutY="310.0" prefHeight="25.0" prefWidth="245.0" promptText="Enter Username or User ID" style="-fx-background-color: transperant; -fx-border-color: #2c6eb5; -fx-border-width: 0px 0px 3px 0px; -fx-padding: 3px 3px 3px 25px; -fx-text-inner-color: #fff;" />
 
-          <!-- Password Field -->
+    <!-- Password Field -->
     <Label layoutX="318.0" layoutY="375.0" text="Password:" textFill="#3e9bf8">
-      <font>
-         <Font name="System Bold Italic" size="19.0" />
-      </font>
-   </Label>
+        <font>
+            <Font name="System Bold Italic" size="19.0" />
+        </font>
+    </Label>
     <PasswordField fx:id="txtPassword" layoutX="438.0" layoutY="370.0" prefHeight="25.0" prefWidth="245.0" promptText="Enter Password" style="-fx-background-color: transperant; -fx-border-color: #2c6eb5; -fx-border-width: 0px 0px 3px 0px; -fx-padding: 3px 3px 3px 25px; -fx-text-inner-color: #fff;" />
 
-          <!-- Login Button -->
+    <!-- Login Button -->
     <Button fx:id="btnLogin" layoutX="374.0" layoutY="436.0" onAction="#handleLoginAction" prefWidth="200.0" style="-fx-background-color: #2c6eb5; -fx-text-fill: white; -fx-cursor: hand;" text="Login">
-      <font>
-         <Font name="System Bold Italic" size="16.0" />
-      </font>
-   </Button>
+        <font>
+            <Font name="System Bold Italic" size="16.0" />
+        </font>
+    </Button>
     <Label layoutX="424.0" layoutY="206.0" prefHeight="56.0" prefWidth="167.0" text="Login" textFill="#3e9bf8">
         <font>
             <Font name="System Bold Italic" size="46.0" />
         </font>
     </Label>
-
+    <Label fx:id="LblLogin" layoutX="881.0" layoutY="529.0" prefHeight="18.0" prefWidth="79.0" textFill="WHITE">
+        <font>
+            <Font name="System Bold Italic" size="16.0" />
+        </font>
+    </Label>
 </AnchorPane>

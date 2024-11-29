@@ -8,7 +8,7 @@
         <?import javafx.scene.layout.AnchorPane?>
         <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.StudentRegisterController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.Controllers.StudentRegisterController">
 
 <!-- Title -->
 <Label layoutX="750.0" layoutY="30.0" text="Student Registration" style="-fx-text-fill: black;">

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-color: linear-gradient(to bottom right,#75E6DA,#05445E);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.Controllers.UserController">
+<AnchorPane prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-color: linear-gradient(to bottom right,#75E6DA,#05445E);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.Controllers.UserController">
 
     <!-- Header Label -->
     <Label layoutX="581.0" layoutY="32.0" style="-fx-font-size: 36px; -fx-font-weight: bold;" text="User Management" textFill="#05445e" />
